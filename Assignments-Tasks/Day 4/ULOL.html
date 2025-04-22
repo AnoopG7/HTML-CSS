@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UL + OL</title>
+</head>
+
+
+<body>
+
+    <!--Practice 1: Basic Unordered List-->
+    <ul>
+        <li>Apples</li>
+        <li>Bananas</li>
+        <li>Cherries</li>
+    </ul>
+      
+    <ul style="list-style-type: circle;">
+        <li>Apples</li>
+        <li>Bananas</li>
+        <li>Cherries</li>
+    </ul>
+
+
+    <!--Practice 2: Basic Ordered List-->
+    <ol>
+        <li>Wake up</li>
+        <li>Brush teeth</li>
+        <li>Eat breakfast</li>
+    </ol>
+      
+    <ol type="I">
+        <li>Wake up</li>
+        <li>Brush teeth</li>
+        <li>Eat breakfast</li>
+    </ol>
+    
+
+    <!--Ordered List with start Attribute-->
+    <ol>
+        <li>Fifth</li>
+        <li>Sixth</li>
+        <li>Seventh</li>
+    </ol>
+
+    <ol start="10">
+        <li>Fifth</li>
+        <li>Sixth</li>
+        <li>Seventh</li>
+      </ol>
+      
+    
+    <!--Practice 4: Nested Unordered List-->
+    <ul>
+        <li>Fruits
+          <ul>
+            <li>Apple</li>
+            <li>Mango</li>
+          </ul>
+        </li>
+        <li>Vegetables</li>
+    </ul>
+      
+    <ul>
+        <li>Fruits
+          <ul>
+            <li>Apple</li>
+            <li>Mango</li>
+            <ul>
+                <li>Berry</li>
+                <li>Melon</li>
+            </ul>
+          </ul>
+        </li>
+        <li>Vegetables</li>
+    </ul>
+      
+
+    <!--Practice 5: Mixed OL & UL-->
+    <ol>
+        <li>Shopping List
+          <ul>
+            <li>Milk</li>
+            <li>Bread</li>
+          </ul>
+        </li>
+        <li>Exercise</li>
+    </ol>
+
+    <ol>
+        <li>Shopping List
+          <ul>
+            <li>Milk</li>
+            <li>Bread</li>
+          </ul>
+        </li>
+        <li>Exercise</li>
+        <ol>
+            <li>Chest</li>
+            <li>Arms</li>
+            <li>Back</li>
+        </ol>
+    </ol>
+      
+
+    <!--Practice 6: Styled UL with Square Bullets-->
+    <ul style="list-style-type: square;">
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+    </ul>
+
+    <ul style="list-style-type: none;">
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+    </ul>
+    
+    <ul style="list-style-type: circle;">
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+    </ul>
+
+
+    <!--Practice 7: Reverse Ordered List-->
+    <ol>
+        <li>Third</li>
+        <li>Second</li>
+        <li>First</li>
+    </ol>
+
+    <ol reversed>
+        <li>Third</li>
+        <li>Second</li>
+        <li>First</li>
+    </ol>
+      
+    <ol reversed start="10">
+        <li>Third</li>
+        <li>Second</li>
+        <li>First</li>
+    </ol>
+    
+    <!--Practice 8: Styled OL with Alphabetical Labels-->
+    <ol type="A">
+        <li>Plan</li>
+        <li>Design</li>
+        <li>Develop</li>
+        <li>Deploy</li>
+    </ol>
+      
+    <ol type="a">
+        <li>Plan</li>
+        <li>Design</li>
+        <li>Develop</li>
+        <li>Deploy</li>
+    </ol>
+
+
+    <!--Practice 9: Horizontal UL (Menu Style)-->
+    <ul style="list-style: none; display: flex; gap: 20px;">
+        <li>Home</li>
+        <li>About</li>
+        <li>Contact</li>
+    </ul>
+
+
+    <!--Practice 11: Multi-column UL-->
+    <ul style="columns: 2; -webkit-columns: 2; -moz-columns: 2;">
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JS</li>
+        <li>Python</li>
+        <li>Java</li>
+        <li>C++</li>
+    </ul>
+
+    <ul style="columns: 3; -webkit-columns: 2; -moz-columns: 2;">
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JS</li>
+        <li>Python</li>
+        <li>Java</li>
+        <li>C++</li>
+    </ul>
+
+
+    <!--Practice 12: Timeline Style OL-->
+    <ol style="list-style-position: inside;">
+        <li>2000 - Born</li>
+        <li>2018 - Graduated High School</li>
+        <li>2022 - Finished College</li>
+    </ol>
+      
+    <ol style="padding-left:auto;">
+        <li>2000 - Born</li>
+        <li>2018 - Graduated High School</li>
+        <li>2022 - Finished College</li>
+    </ol>
+
+
+    <!--Practice 13: Styled UL as Tags-->
+    <ul style="list-style: none; display: flex; gap: 10px;">
+        <li style="background: #eee; padding: 5px 10px; border-radius: 5px;">HTML</li>
+        <li style="background: #eee; padding: 5px 10px; border-radius: 5px;">CSS</li>
+        <li style="background: #eee; padding: 5px 10px; border-radius: 5px;">JavaScript</li>
+     </ul>
+    
+    <ul style="list-style: none; display: flex; gap: 10px;">
+        <li style="background: #777777; padding: 5px 10px; border-radius: 5px;">HTML</li>
+        <li style="background: #e60000; padding: 5px 10px; border-radius: 5px;">CSS</li>
+        <li style="background: #eee; padding: 5px 10px; border-radius: 5px;">JavaScript</li>
+    </ul>
+
+
+    <!--Practice 14: Numbered Steps with Icons-->
+    <ol>
+        <li>🔍 Research</li>
+        <li>✍️ Write</li>
+        <li>🧪 Test</li>
+        <li>🚀 Launch</li>
+    </ol>
+      
+
+    <!-- Practice 15: UL with Custom Bullet Images-->
+    <ul style="list-style-image: url('https://www.w3schools.com/images/pulpit.jpg');">
+        <li>News</li>
+        <li>Blog</li>
+        <li>Tutorials</li>
+    </ul>
+    
+
+    <!--Practice 16: OL for Quiz Answers-->
+    <ol type="A">
+        <li>Paris</li>
+        <li>London</li>
+        <li>Berlin</li>
+        <li>Madrid</li>
+    </ol>
+
+      
+</body>
+</html>
