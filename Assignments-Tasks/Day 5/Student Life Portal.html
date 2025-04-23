@@ -4,164 +4,169 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Student Life Portal</title>
- 
   <style>
     * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-body {
-  font-family: 'Rubik', sans-serif;
-  background-color: #f0f4f8;
-  color: #1f2937;
-  line-height: 1.6;
-  padding: 20px;
-}
+    body {
+      font-family: 'Segoe UI', Tahoma, sans-serif;
+      background: linear-gradient(to right, #a0eae4, #59dff1);
+      color: #1e293b;
+      padding: 20px;
+    }
 
-section, article, nav, header, footer {
-  border-radius: 16px;
-  padding: 24px;
-  margin-bottom: 24px;
-  box-shadow: 0 8px 16px rgba(0,0,0,0.05);
-  color: white;
-}
+    header {
+      background: linear-gradient(135deg, #4f46e5, #7c3aed);
+      color: white;
+      text-align: center;
+      padding: 30px 20px;
+      border-radius: 16px;
+      margin-bottom: 25px;
+    }
 
-img {
-  display: block;
-  max-width: 500px;
-  width: 100%;
-  height: auto;
-  margin: 12px auto 0 auto;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
 
-h1, h2, h3 {
-  margin-bottom: 10px;
-}
+    nav {
+      background: linear-gradient(to right, #10b981, #14b8a6);
+      padding: 14px;
+      border-radius: 12px;
+      margin-bottom: 30px;
+    }
 
-p {
-  margin: 10px 0;
-}
+    nav ul {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
 
-/* Section Background Colors */
-header {
-  background: linear-gradient(135deg, #4f46e5, #a855f7);
-  text-align: center;
-}
+    nav a {
+      text-decoration: none;
+      font-weight: bold;
+      color: white;
+      font-size: 1rem;
+      padding: 6px 12px;
+      border-radius: 8px;
+      transition: background 0.3s;
+    }
 
-nav {
-  background: #14b8a6;
-}
+    nav a:hover {
+      background: rgba(255, 255, 255, 0.2);
+    }
 
-nav ul {
-  list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 15px;
-}
+    section {
+      background: white;
+      border-radius: 16px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+      margin-bottom: 30px;
+      padding: 24px;
+    }
 
-nav a {
-  color: white;
-  text-decoration: none;
-  font-weight: 600;
-}
+    .section-header {
+      background: linear-gradient(135deg, #6366f1, #3b82f6);
+      color: white;
+      padding: 18px;
+      border-radius: 12px;
+      margin-bottom: 16px;
+    }
 
-.about-section {
-  background: linear-gradient(135deg, #fb923c, #f43f5e);
-}
+    .section-header h2 {
+      font-size: 1.6rem;
+    }
 
-.news-section {
-  background: linear-gradient(135deg, #a855f7, #4f46e5);
-}
+    .card {
+      background: linear-gradient(to right, #f97316, #f43f5e);
+      color: white;
+      padding: 18px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
 
-article {
-  background: #ffffff;
-  color: #1f2937;
-  border-radius: 12px;
-  box-shadow: 0 6px 12px rgba(0,0,0,0.05);
-  overflow: hidden;
-}
+    .card p {
+      margin-top: 8px;
+    }
 
-article header {
-  background-color: #f43f5e;
-  color: white;
-  padding: 15px;
-}
+    .nested-card {
+      background: #f9fafb;
+      color: #1e293b;
+      padding: 14px;
+      border-radius: 8px;
+      margin-top: 12px;
+      box-shadow: inset 0 0 5px rgba(0,0,0,0.05);
+    }
 
-footer {
-  background: linear-gradient(135deg, #14b8a6, #4f46e5);
-  text-align: center;
-  font-size: 0.9rem;
-}
+    footer {
+      text-align: center;
+      background: linear-gradient(to right, #4f46e5, #14b8a6);
+      padding: 16px;
+      border-radius: 12px;
+      color: white;
+      font-size: 0.9rem;
+    }
 
   </style>
 </head>
 <body>
 
-    <!-- HERO Header -->
-    <header>
-      <h1>🎓 Welcome to Student Life</h1>
-      <p>Discover, Connect, Thrive. This is your world, make the most of it!</p>
-    </header>
-  
-    <!-- Navigation -->
-    <nav>
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Buzz</a></li>
-        <li><a href="#">Clubs</a></li>
-        <li><a href="#">Events</a></li>
-        <li><a href="#">Gallery</a></li>
-      </ul>
-    </nav>
-  
-    <!-- Did You Know Section -->
-    <section class="about-section">
-      <h2>🤔 Did You Know?</h2>
-      <p>Students who join clubs are 3x more likely to feel connected on campus. So go ahead — join that dance group or gaming club!</p>
-      <img src="https://images.unsplash.com/photo-1531746790731-6c087fecd65a?auto=format&fit=crop&w=1000&q=80" alt="Students laughing"class="small-img" />
-    </section>
-  
-    <!-- Student Spotlight -->
-    <section class="news-section">
-      <h2>🌟 Student Spotlight</h2>
-      <article>
-        <header>
-          <h3>Meet Aanya – Eco Club President</h3>
-        </header>
-        <p>"What I love most is seeing our small campus actions turn into real impact. We’ve planted over 200 trees this semester!"</p>
-        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=800&q=80" alt="Aanya smiling" class="small-img" />
-      </article>
-    </section>
-  
-    <!-- Upcoming Events -->
-    <section class="about-section">
-      <h2>📅 Upcoming Events</h2>
-      <article>
-        <header>
-          <h3>📸 Photography Walk – April 25</h3>
-        </header>
-        <p>Join us for a casual photo walk around campus. Open to beginners and pros!</p>
-        <img src="https://images.unsplash.com/photo-1495567720989-cebdbdd97913?auto=format&fit=crop&w=800&q=80" alt="Photography walk" class="small-img"/>
-      </article>
-  
-      <article>
-        <header>
-          <h3>🎤 Open Mic Night – May 2</h3>
-        </header>
-        <p>Bring your voice, poems, music, and stories. Let’s get expressive!</p>
-        <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=800&q=80" alt="Open mic stage" class="small-img" />
-      </article>
-    </section>
-  
-    <!-- Footer -->
-    <footer>
-      <p>💬 Stay curious. Stay connected. | Follow us @CampusVibes</p>
-    </footer>
-  
-  </body>
-</html>  
+  <!-- Header -->
+  <header>
+    <h1>Student Life Portal</h1>
+    <p>Your go-to hub for campus life, events, clubs, and updates!</p>
+  </header>
+
+  <!-- Navigation -->
+  <nav>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Campus News</a></li>
+      <li><a href="#">Events</a></li>
+      <li><a href="#">Clubs</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Welcome Section -->
+  <section>
+    <div class="section-header">
+      <h2>Welcome, Students!</h2>
+    </div>
+    <p>Explore your university life through this portal. Stay updated with the latest news, engage with active clubs, and never miss an event!</p>
+  </section>
+
+  <!-- Campus Buzz Section -->
+  <section>
+    <div class="section-header">
+      <h2>Latest Campus Buzz</h2>
+    </div>
+
+    <div class="card">
+      <h3>🎉 Spring Fest 2025 Announced!</h3>
+      <p><i>April 23, 2025 · Campus Events Team</i></p>
+      <div class="nested-card">
+        Enjoy food trucks, student bands, interactive games, and a DJ night! The event will be held on May 5th at the central quad. Bring your friends!
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>📰 Debate Club wins Intercollegiate Challenge</h3>
+      <p><i>April 20, 2025 · Student Clubs Team</i></p>
+      <div class="nested-card">
+        The university's debate club defeated 15 colleges and brought home the trophy. Kudos to the amazing team!
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    © 2025 Student Life Portal | Built by Students, for Students
+  </footer>
+
+</body>
+</html>
