@@ -1,0 +1,528 @@
+<!-- 25 Table Tag Practice Exercises-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tag Practice</title>
+</head>
+<body>
+    
+
+<!--Practice 1: Very Basic Table-->
+<table border="1">
+    <tr>
+      <td>Cell 1</td>
+      <td>Cell 2</td>
+    </tr>
+  </table>
+  
+<br>
+
+<table border="1">
+    <tr>
+      <td>Cell 1</td>
+      <td>Cell 2</td>
+      <td>Cell 3</td>
+    </tr>
+  </table>
+
+<hr>
+
+<!--Practice 2: Table with Headers-->
+<table border="1">
+    <tr>
+      <th>Name</th>
+      <th>Age</th>
+    </tr>
+    <tr>
+      <td>Sara</td>
+      <td>22</td>
+    </tr>
+</table>
+
+  <br>
+
+<table border="1">
+    <tr>
+      <th>City</th>
+      <th>Population</th>
+    </tr>
+    <tr>
+      <td>Mumbai</td>
+      <td>24 Million</td>
+    </tr>
+</table>
+
+<hr>
+
+<!--Practice 3: Table with Caption-->
+  
+<table border="1">
+    <caption>🌍 Top Countries</caption>
+    <tr>
+      <th>Country</th>
+      <th>Capital</th>
+    </tr>
+    <tr>
+      <td>India</td>
+      <td>New Delhi</td>
+    </tr>
+</table>
+<br>
+<table border="1">
+    <caption>Asian Countries</caption>
+    <tr>
+      <th>Country</th>
+      <th>Capital</th>
+    </tr>
+    <tr>
+      <td>India</td>
+      <td>New Delhi</td>
+    </tr>
+</table>
+  <hr>
+
+<!--Practice 4: Add 3 Rows-->
+
+
+<table border="1">
+    <tr>
+      <th>Fruit</th>
+      <th>Color</th>
+    </tr>
+    <tr><td>Apple</td><td>Red</td></tr>
+    <tr><td>Banana</td><td>Yellow</td></tr>
+    <tr><td>Grapes</td><td>Purple</td></tr>
+</table>
+  
+<br>
+
+<table border="1">
+    <tr>
+      <th>Fruit</th>
+      <th>Color</th>
+    </tr>
+    <tr><td>Apple</td><td>Red</td></tr>
+    <tr><td>Banana</td><td>Yellow</td></tr>
+    <tr><td>Grapes</td><td>Purple</td></tr>
+    <tr><td>Watermelon</td><td>Green</td></tr>
+</table>
+  
+<hr>
+
+<!-- Practice 5: Mix <th> & <td>-->
+<table border="1">
+    <tr><th>Item</th><td>Pencil</td></tr>
+    <tr><th>Price</th><td>$1</td></tr>
+</table>
+<br>
+<table border="1">
+    <tr><th>Item</th><td>Pencil</td></tr>
+    <tr><th>Price</th><td>$1</td></tr>
+    <tr><th>Quantity</th><td>10</td></tr>
+</table>
+<hr>
+
+<!--Practice 6: Table with Styles-->
+<table style="border: 2px solid black;">
+    <tr><td>Styled Cell</td><td>Another</td></tr>
+</table>
+
+<br>
+
+<table style="border: 2px solid rgb(244, 25, 25);">
+    <tr><td>Styled Cell</td><td>Another</td></tr>
+</table>
+  
+<hr>
+
+<!--Practice 7: Use colspan-->
+<table border="1">
+    <tr><th colspan="2">Full Row</th></tr>
+    <tr><td>Left</td><td>Right</td></tr>
+</table>
+
+<br>
+
+<table border="1">
+    <tr><th colspan="2">Full Row</th></tr>
+    <tr><td>Left</td><td>Right</td></tr>
+    <tr><td>Right</td><td>Left</td></tr>
+</table>
+
+<hr>
+
+<!--Practice 8: Use rowspan-->
+<table border="1">
+    <tr><th rowspan="2">Category</th><td>Math</td></tr>
+    <tr><td>Science</td></tr>
+</table>
+  
+<br>
+
+<table border="1">
+    <tr><th rowspan="3">Category</th><td>Math</td></tr>
+    <tr><td>Science</td></tr>
+    <tr><td>Language</td></tr>
+</table>
+  
+<hr>
+
+<!--Practice 9: Table With Emoji Caption-->
+
+<table border="1">
+    <caption>📚 Subject Scores</caption>
+    <tr><th>Subject</th><th>Marks</th></tr>
+    <tr><td>Math</td><td>90</td></tr>
+</table>
+  
+<br>
+
+<table border="1">
+    <caption>📚 Subject Scores</caption>
+    <tr><th>Subject</th><th>Marks</th></tr>
+    <tr><td>fav</td><td>90</td></tr>
+</table>
+<hr>
+
+
+<!--Practice 10: Add Hover Effect-->
+
+
+<style>
+    tr.tr1:hover { background-color: #f42d00; }
+  </style>
+  <table border="1" >
+    <tr class="tr1"><th>Book</th><th>Author</th></tr>
+    <tr><td>1984</td><td>George Orwell</td></tr>
+</table>
+  
+<br>
+
+<style>
+    tr.tr2:hover { background-color: #d6688d; }
+  </style>
+  <table border="1">
+    <tr class="tr2"><th>Book</th><th>Author</th></tr>
+    <tr><td>1984</td><td>George Orwell</td></tr>
+</table>
+  
+<hr>
+
+
+<!--Practice 11: Style Headings Only-->
+<style>
+    .tr3 th {
+      background-color: black;
+      color: white;
+    }
+  </style>
+  <table border="1">
+    <tr class="tr3"><th>Team</th><th>Score</th></tr>
+    <tr><td>Red</td><td>85</td></tr>
+</table>
+ 
+<br>
+
+<style>
+    .tr4 th {
+      background-color: red;
+      color: white;
+      text-align: right; 
+    }
+  </style>
+  
+  <table border="1">
+    <tr class="tr4"><th>Team</th><th>Score</th></tr>
+    <tr><td>Red</td><td>85</td></tr>
+</table>
+
+<hr>
+
+<!--Practice 12: Table Width-->
+<table border="1" style="width: 80%;">
+    <tr><td>Wide Cell</td><td>Another</td></tr>
+</table>
+  <br>
+<table border="1" style="width: 100%;">
+    <tr><td>Wide Cell</td><td>Another</td></tr>
+</table>
+
+<hr>
+
+<!--Practice 13: Add Border Collapse-->
+<style>
+    table { border-collapse: collapse; }
+    td, th { border: 1px solid #ccc; padding: 6px; }
+  </style>
+  <table>
+    <tr><th>Movie</th><th>Year</th></tr>
+    <tr><td>Inception</td><td>2010</td></tr>
+</table>
+<br>
+<style>
+    .tr5 th, .tr5 td { border: 5px solid #ed0000; padding: 10px; }
+    .tr5 { border-collapse: separate; }
+  </style>
+  
+  <table>
+    <tr class="tr5"><th>Movie</th><th>Year</th></tr>
+    <tr><td>The Expanse</td><td>2011</td></tr>
+</table>
+
+<hr>
+
+<!-- Practice 14: Add Background Color to Rows -->
+<style>
+    .tr6 tr:nth-child(even) { background-color: #eee; }
+</style>
+  
+<table class="tr6" border="1">
+    <tr><th>Day</th><th>Activity</th></tr>
+    <tr><td>Mon</td><td>Gym</td></tr>
+    <tr><td>Tue</td><td>Study</td></tr>
+</table>
+  
+  <br>
+  
+<style>
+    .tr7 tr:nth-child(odd) { background-color: #f80808; }
+</style>
+  
+  <table class="tr7" border="1">
+    <tr><th>Day</th><th>Activity</th></tr>
+    <tr><td>Mon</td><td>Gym</td></tr>
+    <tr><td>Tue</td><td>Study</td></tr>
+</table>
+  <hr>
+
+<!-- Practice 15: Combine All Tags-->
+<table border="1">
+    <caption>🧮 Budget Sheet</caption>
+    <tr><th>Item</th><th>Cost</th></tr>
+    <tr><td>Rent</td><td>$500</td></tr>
+    <tr><td>Food</td><td>$200</td></tr>
+</table>
+  <br>
+<table border="1">
+    <caption>🧮 Budget Sheet</caption>
+    <tr><th>Item</th><th>Cost</th></tr>
+    <tr><td>Rent</td><td>$500</td></tr>
+    <tr><td>Food</td><td>$200</td></tr>
+    <tr>
+        <td colspan="1"><strong>Total</strong></td>
+        <td><strong>$700</strong></td>
+    </tr>
+</table>
+
+<hr>
+
+<!--Practice 16: Fancy Table-->
+<style>
+    .tr8 {
+      width: 50%;
+      margin: auto;
+      border: 2px dashed purple;
+    }
+  </style>
+  <table class="tr8">
+    <caption>🎨 Colors</caption>
+    <tr><td style="background-color: rgb(196, 139, 139);">Red</td><td>#FF0000</td></tr>
+</table>
+  
+<br>
+
+<style>
+    .tr9 {
+      width: 50%;
+      margin: auto;
+      border: 2px dashed purple;
+    }
+  </style>
+  <table class="tr9">
+    <caption>🎨 Colors</caption>
+    <tr><td style="background-color: red;">Red</td><td>#FF0000</td></tr>
+</table>
+
+<hr>
+
+<!--Practice 17: Capital Cities Table-->
+<table border="1">
+    <tr><th>Country</th><th>Capital</th></tr>
+    <tr><td>France</td><td>Paris</td></tr>
+</table>
+  
+<br>
+
+<table border="1">
+    <tr><th>Country</th><th>Capital</th></tr>
+    <tr><td>France</td><td>Paris</td></tr>
+    <tr><td>India</td><td>New Delhi</td></tr>
+    <tr><td>Japan</td><td>Tokyo</td></tr>
+    <tr><td>China</td><td>Beijin</td></tr>
+</table>
+
+<hr>
+
+<!--Practice 18: Add Images in Cells-->
+<table border="1">
+    <tr>
+      <td><img src="https://via.placeholder.com/50" alt="Sample"></td>
+      <td>Description</td>
+    </tr>
+</table>
+  
+<br>
+
+<table border="1">
+    <tr>
+      <td><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2wFuoXeTnJvUBReU-RudnrLfh-RMnzy3Y7w&s" alt="Sample"></td>
+      <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit hic nihil, natus error quibusdam numquam facere inventore, dolores eveniet saepe debitis animi velit nemo exercitationem vitae cumque deleniti adipisci et?</td>
+    </tr>
+</table>
+
+<hr>
+
+<!-- Practice 19: Table Without Borders -->
+ 
+<table id="tableWithoutBorders">
+    <tr><td>No</td><td>Borders</td></tr>
+  </table>
+  <br>
+  
+<style>
+    #myTable {
+      border-collapse: collapse;
+    }
+  
+    #myTable td {
+      border: 1px solid black;
+      padding: 8px;
+    }
+</style>
+  
+  <table id="myTable">
+    <tr><td>No</td><td>Borders</td></tr>
+</table>
+  
+<hr>
+
+<!--Practice 20: Use Table for Layout-->
+<table border="1">
+    <tr><td>Left Menu</td><td>Main Content</td></tr>
+</table>
+  <br>
+<table border="1">
+    <tr>
+      <td style="width: 200px;">Left Menu</td>
+      <td>Main Content</td>
+    </tr>
+</table>
+
+<hr>
+
+<!--Practice 21: Table Inside a Table-->
+
+<table border="1">
+    <tr>
+      <td>Outer Table
+        <table border="1">
+          <tr><td>Inner Table</td></tr>
+        </table>
+      </td>
+    </tr>
+</table>
+  <br>
+
+<table border="1">
+    <tr>
+      <td>Outer Table
+        <table border="1">
+          <tr><td>Inner Table</td></tr>
+          <td>Outer Table
+            <table border="1">
+              <tr><td>Inner Table</td></tr>
+              
+            </table>
+          </td>
+        </table>
+      </td>
+    </tr>
+</table>
+  
+<hr>
+
+<!-- Practice 22: Table with Merged Cells -->
+<table border="1">
+    <tr><td rowspan="2">A</td><td>B</td></tr>
+    <tr><td>C</td></tr>
+</table>
+<br>
+
+<table border="1">
+    <tr>
+      <td rowspan="2">A</td>
+      <td colspan="2">B and C</td>
+    </tr>
+    <tr>
+      <td>B</td>
+      <td>C</td>
+    </tr>
+</table>
+  
+<hr>
+
+<table border="1">
+    <tr><td style="text-align: right;">Right</td><td style="text-align: center;">Center</td></tr>
+</table>
+  
+<br>
+
+<table border="1">
+    <tr>
+      <td style="text-align: right; vertical-align: top;">Right</td>
+      <td style="text-align: center; vertical-align: top;">Center</td>
+    </tr>
+</table>
+  <hr>
+
+<!-- Practice 24: Responsive Width Table -->
+<table style="width: 100%;" border="1">
+    <tr><th>Full Width Table</th><th>✓</th></tr>
+    <tr><td>Stretches to screen</td><td>Yes</td></tr>
+</table>
+  <br>
+<hr>
+
+<!-- Practice 25: Table Challenge! -->
+
+<table border="1">
+    <caption>🌟 Table Challenge! 🌟</caption>
+    <thead>
+      <tr>
+        <th style="background-color: lightblue; text-align: center;">Header 1</th>
+        <th style="background-color: lightgreen; text-align: center;">Header 2</th>
+        <th style="background-color: lightcoral; text-align: center;">Header 3</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Row 1, Col 1</td>
+        <td>Row 1, Col 2</td>
+        <td>Row 1, Col 3</td>
+      </tr>
+      <tr>
+        <td colspan="2" style="text-align: center; background-color: lightyellow;">Merged Columns</td>
+        <td>Row 2, Col 3</td>
+      </tr>
+      <tr>
+        <td>Row 3, Col 1</td>
+        <td>Row 3, Col 2</td>
+        <td>Row 3, Col 3</td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+</html>
