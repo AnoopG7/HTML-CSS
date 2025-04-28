@@ -1,1 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Task 2</title>
+  <style>
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f7fa;
+    line-height: 1.6;
+    padding: 20px;
+  }
+  
+/* Task 1: Profile Card */
+    .profile-card {
+    display: flex;
+    background-color: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin: 30px 0;
+    align-items: center; 
+  }
+  
+  .profile-card img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-right: 20px;
+    border: 3px solid #4CAF50;
+  }
+  
+  .profile-info h2 {
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .profile-info p {
+    color: #666;
+  }
+
+  /* Task 2: Navigation Bar */
+  .navbar {
+    background-color: #333;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; 
+    padding: 15px 0;
+  }
+  
+  .navbar a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    padding: 8px 12px;
+    transition: background-color 0.3s;
+  }
+  
+  .navbar a:hover {
+    background-color: #555;
+    border-radius: 5px;
+  }
+   
+  /* Task 3: 3-Column Layout */
+  .layout-container {
+    display: flex;
+    margin: 30px 0;
+    gap: 20px; 
+  }
+  
+
+  .sidebar {
+    background-color: #e0e0e0;
+    padding: 20px;
+    border-radius: 8px;
+    width: 200px;
+  }
+  
+
+  .main-content {
+    background-color: #ffffff;
+    flex: 1; 
+    padding: 20px;
+    border-radius: 8px;
+  }
+  
+  /* Challenge: Footer */
+  .footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    border-radius: 8px;
+  }
+  
+  @media (max-width: 768px) {
+    
+
+    .navbar {
+      flex-direction: column;
+    }
+    
+    .navbar a {
+      margin: 10px 0;
+    }
+  
+    .profile-card {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .profile-card img {
+      margin-bottom: 15px;
+    }
+  
+    .layout-container {
+      flex-direction: column;
+    }
+  
+    .sidebar {
+      width: 100%;
+    }
+  
+    .main-content {
+      width: 100%;
+    }
+  }
+  
+  </style>
+
+</head>
+<body>
+
+
+  <!-- Task 1: Profile Card -->
+  <section class="profile-card">
+    <img src="https://via.placeholder.com/120" alt="Profile Picture">
+    <div class="profile-info">
+      <h2>Anoop Gupta</h2>
+      <p>Task 2.</p>
+    </div>
+  </section>
+
+
+  <!-- Task 2: Navigation Bar -->
+  <nav class="navbar">
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Services</a>
+    <a href="#">Contact</a>
+  </nav>
+
+  <!-- Task 3: 3-Column Layout -->
+  <section class="layout-container">
+    <aside class="sidebar left-sidebar">
+      <h3>Left Sidebar</h3>
+      <p>Some extra links or info here.</p>
+    </aside>
+
+    <main class="main-content">
+      <h2>Main Content</h2>
+      <p>This is the flexible area where the main content will go.</p>
+    </main>
+
+    <aside class="sidebar right-sidebar">
+      <h3>Right Sidebar</h3>
+      <p>Additional ads or widgets here.</p>
+    </aside>
+  </section>
+
+  <!-- Challenge: Footer -->
+  <footer class="footer">
+    <p>© 2025 Your Name. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
