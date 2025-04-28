@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Form Example</title>
+  <style>
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #f8f8f8;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;    
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+section{
+            margin: 10px;
+            border: 1px solid lightslategray;
+            border-radius: 5px;
+            padding: 10px ;
+        }
+
+.form-container {
+  text-align: left;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 50px 40px; 
+  border-radius: 25px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+  width: 90%;
+  max-width: 400px;
+  animation: fadeIn 1s ease forwards;
+  margin: 30px; 
+}
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    select,
+    textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    input[type="radio"] {
+      margin-right: 5px;
+    }
+    .gender-group {
+      margin-top: 5px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    .gender-group label {
+      display: inline-block;
+      margin-right: 10px;
+      font-weight: normal;
+    }
+    .submit-btn {
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      padding: 12px;
+      width: 100%;
+      border-radius: 4px;
+      margin-top: 20px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    .submit-btn:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+
+<div class="form-container">
+  <form>
+    <label for="fullName">Full Name:</label>
+    <input type="text" id="fullName" name="fullName" value="Your name">
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" placeholder="you@example.com">
+
+    <label for="phone">Phone Number:</label>
+    <input type="tel" id="phone" name="phone" placeholder="123-456-7890">
+
+    <label>Gender:</label>
+    <div class="gender-group">
+      <label><input type="radio" name="gender" value="male"> Male</label>
+      <label><input type="radio" name="gender" value="female"> Female</label>
+      <label><input type="radio" name="gender" value="other"> Other</label>
+    </div>
+
+    <label for="city">City:</label>
+    <select id="city" name="city">
+      <option value="newyork">Default</option>
+      <option value="newyork">New York</option>
+      <option value="losangeles">Los Angeles</option>
+      <option value="chicago">Chicago</option>
+      <option value="houston">Houston</option>
+    </select>
+
+    <label>
+      <input type="checkbox" name="newsletter">
+      Subscribe to our newsletter:
+    </label>
+
+    <label for="resume">Upload Resume:</label>
+    <section>
+    <input type="file" id="resume" name="resume">
+</section>
+    <label for="message">Message:</label>
+    <textarea id="message" name="message" rows="4" placeholder="Write your message here..."></textarea>
+
+    <button type="submit" class="submit-btn">Submit</button>
+  </form>
+</div>
+
+</body>
+</html>
