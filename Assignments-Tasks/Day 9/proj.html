@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Mood Journal</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #fdf6e3;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .journal {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .entry {
+      width: 300px;
+      background: #fff3b0;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      position: relative;
+      transition: transform 0.3s;
+    }
+
+    .entry:nth-child(even) {
+      background: #add8e6; /* light blue for even cards */
+    }
+
+    .entry:hover {
+      transform: scale(1.03);
+    }
+
+    .entry::after {
+      content: "✨✨✨";
+      display: block;
+      text-align: center;
+      margin-top: 10px;
+      font-size: 12px;
+      color: gray;
+    }
+
+    .entry h2 {
+      margin-top: 0;
+      position: relative;
+      padding-left: 30px;
+    }
+
+    .happy::before,
+    .meh::before,
+    .sad::before {
+      position: absolute;
+      left: 20px;
+      font-size: 24px;
+      top: 22px;
+    }
+
+    .happy::before {
+      content: "😀";
+    }
+
+    .meh::before {
+      content: "😐";
+    }
+
+    .sad::before {
+      content: "😢";
+    }
+
+    .happy:hover::before {
+      content: "😄";
+    }
+
+    .meh:hover::before {
+      content: "🙂";
+    }
+
+    .sad:hover::before {
+      content: "😭";
+    }
+
+    .entry p::first-letter {
+      font-size: 150%;
+      font-weight: bold;
+      color: darkslateblue;
+    }
+
+    .like-button {
+      background: none;
+      border: none;
+      font-size: 20px;
+      cursor: pointer;
+      transition: transform 0.2s;
+      margin-top: 10px;
+    }
+
+    .like-button:active {
+      transform: scale(1.3);
+      color: deeppink;
+    }
+
+    .like-button:active::after {
+      content: " 💖";
+    }
+  </style>
+</head>
+<body>
+  <h1>My Mood Journal</h1>
+  <div class="journal">
+
+    <div class="entry happy">
+      <h2>Feeling Great!</h2>
+      <p>Today was awesome. I finished my homework and played outside!</p>
+      <button class="like-button">❤️ Like</button>
+    </div>
+
+    <div class="entry meh">
+      <h2>Just Another Day</h2>
+      <p>I did my regular routine. Nothing exciting, but not bad either.</p>
+      <button class="like-button">❤️ Like</button>
+    </div>
+
+    <div class="entry sad">
+      <h2>A Little Down</h2>
+      <p>I missed my friends today and felt a bit lonely.</p>
+      <button class="like-button">❤️ Like</button>
+    </div>
+
+  </div>
+  
+</body>
+</html>

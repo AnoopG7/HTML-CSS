@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>Floating Emojis</title>
+
+<style>
+
+body {
+
+margin: 0;
+
+padding: 0;
+
+background: #f0f8ff;
+
+overflow: hidden;
+
+font-family: sans-serif;
+
+}
+
+.emoji {
+
+position: absolute;
+
+font-size: 2rem;
+
+animation: floatUp 8s linear infinite;
+
+opacity: 0.8;
+
+}
+
+@keyframes floatUp {
+
+0% {
+
+bottom: -50px;
+
+opacity: 0;
+
+transform: translateX(0);
+
+}
+
+50% {
+
+opacity: 1;
+
+transform: translateX(20px);
+
+}
+
+100% {
+
+bottom: 100%;
+
+opacity: 0;
+
+transform: translateX(-20px);
+
+}
+
+}
+
+/* Random starting positions and delays */
+
+.emoji:nth-child(1)  { left: 10%;  animation-delay: 0s;  }
+
+.emoji:nth-child(2)  { left: 25%;  animation-delay: 2s;  }
+
+.emoji:nth-child(3)  { left: 40%;  animation-delay: 4s;  }
+
+.emoji:nth-child(4)  { left: 60%;  animation-delay: 1s;  }
+
+.emoji:nth-child(5)  { left: 75%;  animation-delay: 3s;  }
+
+.emoji:nth-child(6)  { left: 90%;  animation-delay: 5s;  }
+
+</style>
+
+</head>
+
+<body>
+
+<div class="emoji">🎈</div>
+
+<div class="emoji">🌟</div>
+
+<div class="emoji">🎉</div>
+
+<div class="emoji">💖</div>
+
+<div class="emoji">🍀</div>
+
+<div class="emoji">🔥</div>
+
+</body>
+
+</html>

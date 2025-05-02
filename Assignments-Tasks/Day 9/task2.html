@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Animation Tasks</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background: #f4f4f4;
+    }
+    .task {
+      margin-bottom: 40px;
+    }
+    .box, .circle, .bouncer, .mover, .box1, .box2, .box3, .box4, .grow-box, .pauser, .loader, .button {
+  margin: 20px auto;
+  display: block;
+}
+
+  </style>
+</head>
+<body>
+  <div class="task box"></div>
+  <style>
+        /* Task 1 */
+        .box {
+      width: 100px;
+      height: 100px;
+      background-color: tomato;
+      animation-name: slideRight;
+      animation-duration: 2s;
+    }
+    @keyframes slideRight {
+      from { transform: translateX(0); }
+      to { transform: translateX(100px); }
+    }
+  </style>
+  <hr>
+
+  <div class="task circle"></div>
+  <style>
+        /* Task 2 */
+        .circle {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      background-color: blue;
+      animation: changeColor 2s ease 2s forwards;
+    }
+    @keyframes changeColor {
+      to { background-color: orange; }
+    }
+  </style>
+  <hr>
+
+  <div class="task bouncer"></div>
+  <style>
+        /* Task 3 */
+        .bouncer {
+      width: 100px;
+      height: 100px;
+      background-color: green;
+      animation: bounce 1s ease-in-out 3;
+    }
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-100px); }
+    }
+  </style>
+  <hr>
+
+  <div class="task mover"></div>
+  <style>
+     /* Task 4 */
+     .mover {
+      width: 100px;
+      height: 100px;
+      background-color: purple;
+      animation: moveAlternate 1s ease-in-out infinite alternate;
+    }
+    @keyframes moveAlternate {
+      from { transform: translateX(0); }
+      to { transform: translateX(100px); }
+    }
+  </style>
+  <hr>
+
+  <div class="task">
+    <style>
+            /* Task 5 */
+    .box1, .box2, .box3, .box4 {
+      width: 100px;
+      height: 50px;
+      background: gray;
+      margin: 10px;
+      animation: move 2s infinite;
+    }
+    .box1 { animation-timing-function: linear; }
+    .box2 { animation-timing-function: ease-in; }
+    .box3 { animation-timing-function: ease-out; }
+    .box4 { animation-timing-function: ease-in-out; }
+    @keyframes move {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(200px); }
+    }
+    </style>
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+    <div class="box4"></div>
+  </div>
+  <hr>
+
+  <div class="task grow-box"></div>
+  <style>
+        /* Task 6 */
+        .grow-box {
+      width: 100px;
+      height: 100px;
+      background-color: teal;
+      animation: grow 2s forwards;
+    }
+    @keyframes grow {
+      to { transform: scale(2); }
+    }
+  </style>
+  <hr>
+
+  <div class="task task7">
+    <style>   
+        /* Task 7 */
+        .task7 .box {
+          opacity: 0.3;
+          transform: scale(0.5);
+          animation: normalize 2s backwards;
+        }
+        @keyframes normalize {
+          to { opacity: 1; transform: scale(1); }
+        }
+        </style>
+    <div class="box"></div>
+  </div>
+  <hr>
+
+  <div class="task">
+    <div class="pauser" id="animateBox"></div>
+    <button onclick="toggleAnimation()">Pause/Play</button>
+    <style>
+    /* Task 8 */
+    .pauser {
+      width: 100px;
+      height: 100px;
+      background-color: orange;
+      animation: slide 2s infinite;
+    }
+    @keyframes slide {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(200px); }
+    }   
+    </style>
+  </div>
+  <script>
+    function toggleAnimation() {
+      const box = document.getElementById("animateBox");
+      const currentState = box.style.animationPlayState || 'running';
+      box.style.animationPlayState = currentState === 'running' ? 'paused' : 'running';
+    }
+  </script>
+  <hr>
+
+
+  <div class="task loader">
+    <style>
+    /* Task 9 */
+   .loader {
+      width: 50px;
+      height: 50px;
+      background-color: red;
+      border-radius: 50%;
+      animation: loaderAnim 2s ease-in-out 3 alternate forwards;
+    }
+    @keyframes loaderAnim {
+      0% { transform: scale(1); background-color: red; }
+      50% { transform: scale(1.5); background-color: yellow; }
+      100% { transform: scale(1); background-color: red; }
+    }
+    </style>
+  </div>
+  <hr>
+
+  <div class="task">
+    <style>
+    /* Task 10 */
+    .button {
+      position: relative;
+      padding: 10px 20px;
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    .button::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      height: 3px;
+      width: 0;
+      background: white;
+      transition: width 0.3s;
+    }
+    .button:hover::after {
+      width: 100%;
+    }
+    </style>
+    <button class="button">Hover me</button>
+  </div>
+  <hr>
+
+  <script>
+    function toggleAnimation() {
+    const box = document.getElementById("box");
+    const currentState = box.style.animationPlayState || 'running';
+    box.style.animationPlayState = currentState === 'running' ? 'paused' : 'running';
+    }
+    </script>
+  
+  </script>
+</body>
+</html>
