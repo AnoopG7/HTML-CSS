@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Animation</title>
+</head>
+<body>
+    
+    <div class="box"></div>
+    <style>
+      .box {
+        width: 100px;
+        height: 100px;
+        animation: colorChange 4s;
+        animation-duration: 4s;
+      }
+      
+    @keyframes colorChange {
+        from{background-color: aqua;}
+        to{background-color: blue;}
+    }
+    </style>
+    
+<hr>
+
+
+<div class="multi"></div>
+<style>
+  .multi {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    animation: moveColor 5s forwards;
+  }
+
+  @keyframes moveColor {
+    0%   { left: 0; background: red; }
+    25%  { left: 50px; background: orange; }
+    50%  { left: 100px; background: yellow; }
+    100% { left: 200px; background: green; }
+  }
+</style>
+
+
+<hr>
+
+
+<div class="pulse"></div>
+<style>
+  .pulse {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: blue;
+    animation: pulseAnim 1s infinite alternate;
+  }
+
+  @keyframes pulseAnim {
+    from { transform: scale(1); }
+    to   { transform: scale(1.2); }
+  }
+</style>
+
+<hr>
+
+
+<button class="hover-btn">Hover Me</button>
+<style>
+  .hover-btn:hover {
+    background-color: lightgreen;
+  }
+</style>
+
+
+<hr>
+
+<input type="text" placeholder="Focus me">
+<style>
+  input:focus {
+    border: 2px solid royalblue;
+    outline: none;
+  }
+</style>
+
+
+<hr>    
+
+
+    <ul>
+    <li>First item</li>
+    <li>Second item</li>
+  </ul>
+  
+  <style>
+    li:first-child {
+      color: red;
+    }
+  </style>
+
+
+
+<hr>
+
+
+<h2>Introduction</h2>
+
+<style>
+  h2::before {
+    content: "🔹 ";
+  }
+</style>
+
+
+<hr>
+
+
+<p>Learning CSS is fun and powerful.</p>
+
+<style>
+  p::first-letter {
+    font-size: 200%;
+    color: darkorange;
+  }
+</style>
+
+
+<hr>
+
+
+
+<ul>
+    <li>HTML</li>
+    <li>CSS</li>
+</ul>
+  
+  <style>
+    li::marker {
+      content: "= ";
+      color: purple;
+    }
+  </style>
+
+
+<hr>
+
+
+<button class="shine-btn">Click Me</button>
+
+<style>
+  .shine-btn {
+    position: relative;
+    padding: 12px 30px;
+    background: #3498db;
+    color: white;
+    border: none;
+    overflow: hidden;
+    font-size: 16px;
+  }
+
+  .shine-btn::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -75%;
+    width: 50%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.3);
+    transform: skewX(-20deg);
+  }
+
+  .shine-btn:hover::after {
+    animation: slide-shine 0.75s linear forwards;
+  }
+
+  @keyframes slide-shine {
+    to { left: 125%; }
+  }
+</style>
+
+
+
+<hr>
+
+<div class="box1"></div>
+<style>
+    .box1 {
+      width: 100px;
+      height: 100px;
+      background-color: tomato;
+      animation-name: moveBox;
+      animation-duration: 2s;
+      animation-iteration-count: infinite;
+      animation-timing-function: ease-in-out;
+    }
+
+    @keyframes moveBox {
+      0%   { transform: translateX(0); }
+      50%  { transform: translateX(1350%); }
+      100% { transform: translateX(0); }
+    }
+  </style>
+
+
+
+
+
+
+
+</body>
+</html>
