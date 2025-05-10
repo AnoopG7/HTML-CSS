@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selectors Exercises</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.exercise {
+    margin-bottom: 40px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.exercise h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Exercise 1: Profile Card */
+.card {
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+#name {
+    color: #000080;
+}
+
+.bio {
+    font-style: italic;
+}
+
+.card a {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Exercise 2: Navigation Menu */
+nav ul {
+    list-style: none;
+}
+
+nav li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+nav a {
+    text-transform: uppercase;
+    color: #333;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: red;
+}
+
+nav li:first-child a {
+    background-color: #e0e0e0;
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+
+/* Exercise 3: Form Field Focus */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+form input {
+    border: 2px solid #ddd;
+    padding: 8px;
+    border-radius: 4px;
+}
+
+form input:focus {
+    outline: none;
+    border-color: #007bff;
+}
+
+form input[type="email"] {
+    background-color: #f8f9fa;
+}
+
+form button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Exercise 4: Pseudo-elements */
+article h3::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: red;
+    margin-bottom: 10px;
+}
+
+article p::first-line {
+    text-transform: uppercase;
+}
+
+article p::before {
+    content: "*";
+    color: blue;
+    margin-right: 5px;
+}
+
+/* Exercise 5: Advanced Targeting */
+.blog h3 {
+    font-weight: bold;
+}
+
+.blog article:nth-child(2) p {
+    color: #6c757d;
+}
+
+.blog article:nth-child(2) {
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 4px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+    
+    nav li {
+        display: block;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Exercise 1: Profile Card -->
+        <section class="exercise profile-card">
+            <h2>Exercise 1: Profile Card</h2>
+            <div class="card">
+                <h2 id="name">Alex Johnson</h2>
+                <p class="bio">Front-end Developer from New York</p>
+                <a href="#">View Profile</a>
+            </div>
+        </section>
+
+        <!-- Exercise 2: Navigation Menu -->
+        <section class="exercise navigation">
+            <h2>Exercise 2: Navigation Menu</h2>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </section>
+
+        <!-- Exercise 3: Form Field Focus -->
+        <section class="exercise form">
+            <h2>Exercise 3: Form Field Focus</h2>
+            <form>
+                <label>Email:</label>
+                <input type="email" />
+
+                <label>Password:</label>
+                <input type="password" />
+
+                <button>Login</button>
+            </form>
+        </section>
+
+        <!-- Exercise 4: Pseudo-elements -->
+        <section class="exercise pseudo-elements">
+            <h2>Exercise 4: Pseudo-elements</h2>
+            <article>
+                <h3>Breaking News</h3>
+                <p>Some important text goes here.</p>
+            </article>
+        </section>
+
+        <!-- Exercise 5: Advanced Targeting -->
+        <section class="exercise advanced-targeting">
+            <h2>Exercise 5: Advanced Targeting</h2>
+            <section class="blog">
+                <h2>Blog Posts</h2>
+                <article>
+                    <h3>Post One</h3>
+                    <p>Text of post one.</p>
+                </article>
+                <article>
+                    <h3>Post Two</h3>
+                    <p>Text of post two.</p>
+                </article>
+            </section>
+        </section>
+    </div>
+</body>
+</html>

@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Exercises</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    padding: 20px;
+    background-color: #464646;
+}
+
+
+.card-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.card {
+    flex: 1 1 250px;
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h2 {
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.card p {
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.card button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.card button:hover {
+    background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+    .card {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .card {
+        flex: 1 1 45%;
+    }
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.exercise {
+    margin: 40px 0;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.exercise h2 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+    background: #333;
+    border-radius: 4px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+}
+
+.navbar a:hover {
+    background: #555;
+    border-radius: 4px;
+}
+
+.center-box-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    background: #f0f0f0;
+    border-radius: 8px;
+}
+
+.center-box {
+    padding: 20px;
+    background: white;
+    border-radius: 4px;
+}
+
+.card-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.exercise-card {
+    flex: 1 1 250px;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+@media (max-width: 768px) {
+    .exercise-card {
+        flex: 1 1 100%;
+    }
+}
+
+.equal-columns {
+    display: flex;
+    gap: 20px;
+}
+
+.column {
+    flex: 1;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.layout {
+    display: flex;
+    gap: 20px;
+}
+
+.sidebar {
+    flex: 1;
+    background: #f0f0f0;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.main-content {
+    flex: 3;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+@media (max-width: 768px) {
+    .layout {
+        flex-direction: column;
+    }
+}
+
+.button-row {
+    display: flex;
+    gap: 10px;
+}
+
+.right-button {
+    margin-left: auto;
+}
+
+.vertical-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+    background: #333;
+    border-radius: 8px;
+}
+
+.vertical-nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.vertical-nav a:hover {
+    background: #555;
+}
+
+.order-container {
+    display: flex;
+    gap: 20px;
+}
+
+.order-item {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.grow-container {
+    display: flex;
+    gap: 20px;
+}
+
+.grow-item {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.profile {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.profile-image {
+    flex: 1;
+}
+
+.profile-image img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.profile-info {
+    flex: 2;
+}
+
+@media (max-width: 768px) {
+    .profile {
+        flex-direction: column;
+    }
+    
+    .profile-image img {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+    }
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Flexbox Card Layout</h1>
+        <div class="card-container">
+            <div class="card">
+                <h2>Card 1</h2>
+                <p>This is a sample card with some content.</p>
+                <button>Learn More</button>
+            </div>
+            <div class="card">
+                <h2>Card 2</h2>
+                <p>This card has slightly more content to demonstrate equal heights.</p>
+                <button>Learn More</button>
+            </div>
+            <div class="card">
+                <h2>Card 3</h2>
+                <p>This card has even more content to show how flexbox handles varying content sizes.</p>
+                <button>Learn More</button>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <h1>Flexbox Exercises</h1>
+        
+        <section class="exercise">
+            <h2>Exercise 1: Horizontal Navigation Bar</h2>
+            <nav class="navbar">
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">Contact</a>
+            </nav>
+        </section>
+
+        <section class="exercise">
+            <h2>Exercise 2: Center a Box</h2>
+            <div class="center-box-container">
+                <div class="center-box">
+                    I'm perfectly centered!
+                </div>
+            </div>
+        </section>
+
+        <section class="exercise">
+            <h2>Exercise 3: Responsive Card Row</h2>
+            <div class="card-row">
+                <div class="exercise-card">Card 1</div>
+                <div class="exercise-card">Card 2</div>
+                <div class="exercise-card">Card 3</div>
+            </div>
+        </section>
+
+        <section class="exercise">
+            <h2>Exercise 4: Equal Height Columns</h2>
+            <div class="equal-columns">
+                <div class="column">Short content</div>
+                <div class="column">More content that goes on for a bit longer</div>
+                <div class="column">Even more content that continues on and on and on...</div>
+            </div>
+        </section>
+
+        <section class="exercise">
+            <h2>Exercise 5: Sidebar + Main Content</h2>
+            <div class="layout">
+                <aside class="sidebar">Sidebar</aside>
+                <main class="main-content">Main Content</main>
+            </div>
+        </section>
+
+        <section class="exercise">
+            <h2>Exercise 6: Button Row with Right Aligned Button</h2>
+            <div class="button-row">
+                <button>Button 1</button>
+                <button>Button 2</button>
+                <button>Button 3</button>
+                <button class="right-button">Right Button</button>
+            </div>
+        </section>
+
+        <section class="exercise">
+            <h2>Exercise 7: Vertical Flexbox Navigation</h2>
+            <nav class="vertical-nav">
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">Services</a>
+                <a href="#">Contact</a>
+            </nav>
+        </section>
+
+        <section class="exercise">
+            <h2>Exercise 8: Flex Order Change</h2>
+            <div class="order-container">
+                <div class="order-item" style="order: 3;">Item 1</div>
+                <div class="order-item" style="order: 1;">Item 2</div>
+                <div class="order-item" style="order: 2;">Item 3</div>
+            </div>
+        </section>
+
+        <section class="exercise">
+            <h2>Exercise 9: Grow One Box More Than Others</h2>
+            <div class="grow-container">
+                <div class="grow-item">Regular Item</div>
+                <div class="grow-item" style="flex-grow: 2;">Larger Item</div>
+                <div class="grow-item">Regular Item</div>
+            </div>
+        </section>
+
+        <section class="exercise">
+            <h2>Exercise 10: Profile Layout</h2>
+            <div class="profile">
+                <div class="profile-image">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMFIMiSwX_AlzPot4VJ7JeYb1OWR6IcbIlPA&s" alt="Person">
+                </div>
+                <div class="profile-info">
+                    <h3>John Doe</h3>
+                    <p>Web Developer</p>
+                    <p>Location: New York</p>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

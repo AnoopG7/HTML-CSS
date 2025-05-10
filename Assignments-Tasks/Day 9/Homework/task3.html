@@ -1,0 +1,995 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 3</title>
+</head>
+
+<body>
+    <h3>Task 1: Portfolio Page Layout</h3>
+
+<div class="grid">
+  <div class="header">
+    <h2>💼 My Portfolio</h2>
+  </div>
+
+  <div class="sidebar">
+    <h3>Navigation</h3>
+    <nav>
+      <a href="#">🏠 Home</a>
+      <a href="#">👤 About Me</a>
+      <a href="#">💻 Projects</a>
+      <a href="#">📬 Contact</a>
+    </nav>
+  </div>
+
+  <div class="content">
+    <h3>Featured Project</h3>
+    <p>This section showcases my best projects with screenshots, descriptions, and links to GitHub or live demos.</p>
+    <p>✨ <strong>Project 1:</strong> Responsive Website using HTML, CSS, and JS</p>
+    <p>✨ <strong>Project 2:</strong> To-Do App with JavaScript</p>
+  </div>
+
+  <div class="footer">
+    <p>&copy; My Portfolio</p>
+  </div>
+</div>
+
+<style>
+  .grid {
+    width: 100%;
+    display: grid;
+    grid-template-areas:
+      "header header"
+      "sidebar content"
+      "footer footer";
+    grid-template-columns: 200px 1fr;
+    grid-template-rows: 100px 1fr 50px;
+    gap: 1rem;
+    padding: 1rem;
+    box-sizing: border-box;
+  }
+
+  .header {
+    grid-area: header;
+    background-color: #0077cc;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 0 1rem;
+    border-radius: 0.5rem;
+  }
+
+  .sidebar {
+    grid-area: sidebar;
+    background-color: #f4f4f4;
+    padding: 1rem;
+    border-radius: 0.5rem;
+  }
+
+  .sidebar nav a {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem;
+    text-decoration: none;
+    color: #333;
+    border-radius: 0.25rem;
+    transition: background 0.3s;
+  }
+
+  .sidebar nav a:hover {
+    background-color: #e0e0e0;
+    color: #000;
+  }
+
+  .content {
+    grid-area: content;
+    background-color: #ffffff;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  }
+
+  .footer {
+    grid-area: footer;
+    background-color: #ddd;
+    text-align: center;
+    padding: 1rem;
+    border-radius: 0.5rem;
+  }
+</style>
+
+
+<h3>Task 2: Responsive Grid Layout for a Photo Gallery</h3>
+
+<div class="photo_gal">
+  <img src="https://media.istockphoto.com/id/1322717990/photo/thick-dark-black-heavy-storm-clouds-covered-summer-sunset-sky-horizon-gale-speed-wind-blowing.jpg?s=612x612&w=0&k=20&c=2YasxBShNC0YX7a-gwZJuCJRjEepEKTngyiyq3PvTws=" alt="Nature">
+  <img src="https://media.istockphoto.com/id/1322717990/photo/thick-dark-black-heavy-storm-clouds-covered-summer-sunset-sky-horizon-gale-speed-wind-blowing.jpg?s=612x612&w=0&k=20&c=2YasxBShNC0YX7a-gwZJuCJRjEepEKTngyiyq3PvTws=" alt="City">
+  <img src="https://media.istockphoto.com/id/1322717990/photo/thick-dark-black-heavy-storm-clouds-covered-summer-sunset-sky-horizon-gale-speed-wind-blowing.jpg?s=612x612&w=0&k=20&c=2YasxBShNC0YX7a-gwZJuCJRjEepEKTngyiyq3PvTws=" alt="Technology">
+  <img src="https://media.istockphoto.com/id/1322717990/photo/thick-dark-black-heavy-storm-clouds-covered-summer-sunset-sky-horizon-gale-speed-wind-blowing.jpg?s=612x612&w=0&k=20&c=2YasxBShNC0YX7a-gwZJuCJRjEepEKTngyiyq3PvTws=" alt="Mountains">
+  <img src="https://media.istockphoto.com/id/1322717990/photo/thick-dark-black-heavy-storm-clouds-covered-summer-sunset-sky-horizon-gale-speed-wind-blowing.jpg?s=612x612&w=0&k=20&c=2YasxBShNC0YX7a-gwZJuCJRjEepEKTngyiyq3PvTws=" alt="Forest">
+  <img src="https://media.istockphoto.com/id/1322717990/photo/thick-dark-black-heavy-storm-clouds-covered-summer-sunset-sky-horizon-gale-speed-wind-blowing.jpg?s=612x612&w=0&k=20&c=2YasxBShNC0YX7a-gwZJuCJRjEepEKTngyiyq3PvTws=" alt="Space">
+  <img src="https://media.istockphoto.com/id/1322717990/photo/thick-dark-black-heavy-storm-clouds-covered-summer-sunset-sky-horizon-gale-speed-wind-blowing.jpg?s=612x612&w=0&k=20&c=2YasxBShNC0YX7a-gwZJuCJRjEepEKTngyiyq3PvTws=" alt="Beach">
+  <img src="https://media.istockphoto.com/id/1322717990/photo/thick-dark-black-heavy-storm-clouds-covered-summer-sunset-sky-horizon-gale-speed-wind-blowing.jpg?s=612x612&w=0&k=20&c=2YasxBShNC0YX7a-gwZJuCJRjEepEKTngyiyq3PvTws=" alt="Sunset">
+</div>
+
+<style>
+  .photo_gal {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 1rem;
+    box-sizing: border-box;
+  }
+
+  .photo_gal img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 0.5rem;
+  }
+
+  /* Medium screens: 2 columns */
+  @media (min-width: 600px) and (max-width: 900px) {
+    .photo_gal {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  /* Large screens: 4 columns */
+  @media (min-width: 901px) {
+    .photo_gal {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+</style>
+
+
+<h3>Task 3: Simple Blog Layout</h3>
+
+<section class="sec3">
+  <div class="headerr">📰 My Blog Header</div>
+  <div class="sidebar">
+    <p><strong>Sidebar</strong></p>
+    <ul>
+      <li>Home</li>
+      <li>About</li>
+      <li>Contact</li>
+    </ul>
+  </div>
+  <div class="content">
+    <h2>Blog Post Title</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum.</p>
+  </div>
+</section>
+
+<style>
+  .sec3 {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: max-content auto;
+    grid-template-areas: 
+      "header header"
+      "sidebar content";
+    gap: 1rem;
+    padding: 1rem;
+    box-sizing: border-box;
+  }
+
+  .headerr {
+    grid-area: header;
+    background-color: #0077cc;
+    color: white;
+    padding: 1rem;
+    font-size: 1.5rem;
+    border-radius: 0.5rem;
+  }
+
+  .sidebar {
+    grid-area: sidebar;
+    background-color: #f4f4f4;
+    padding: 1rem;
+    border-radius: 0.5rem;
+  }
+
+  .content {
+    grid-area: content;
+    background-color: #ffffff;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Optional: Make layout stack on smaller screens */
+  @media (max-width: 768px) {
+    .sec3 {
+      grid-template-columns: 1fr;
+      grid-template-areas: 
+        "header"
+        "content"
+        "sidebar";
+    }
+  }
+</style>
+
+<h3>Task 4: Responsive Product Grid</h3>
+
+<section class="product_catalog">
+  <div class="product">
+    <img src="https://source.unsplash.com/200x200/?skincare" alt="Product 1">
+    <h4>Herbal Face Wash</h4>
+    <p>₹299</p>
+    <button>Buy Now</button>
+  </div>
+  <div class="product">
+    <img src="https://source.unsplash.com/200x200/?moisturizer" alt="Product 2">
+    <h4>Natural Moisturizer</h4>
+    <p>₹499</p>
+    <button>Buy Now</button>
+  </div>
+  <div class="product">
+    <img src="https://source.unsplash.com/200x200/?shampoo" alt="Product 3">
+    <h4>Organic Shampoo</h4>
+    <p>₹399</p>
+    <button>Buy Now</button>
+  </div>
+  <div class="product">
+    <img src="https://source.unsplash.com/200x200/?bodywash" alt="Product 4">
+    <h4>Gentle Body Wash</h4>
+    <p>₹349</p>
+    <button>Buy Now</button>
+  </div>
+  <div class="product">
+    <img src="https://source.unsplash.com/200x200/?sunscreen" alt="Product 5">
+    <h4>SPF 50 Sunscreen</h4>
+    <p>₹599</p>
+    <button>Buy Now</button>
+  </div>
+  <div class="product">
+    <img src="https://source.unsplash.com/200x200/?facecream" alt="Product 6">
+    <h4>Glow Face Cream</h4>
+    <p>₹459</p>
+    <button>Buy Now</button>
+  </div>
+  <div class="product">
+    <img src="https://source.unsplash.com/200x200/?lipbalm" alt="Product 7">
+    <h4>Shea Lip Balm</h4>
+    <p>₹149</p>
+    <button>Buy Now</button>
+  </div>
+  <div class="product">
+    <img src="https://source.unsplash.com/200x200/?essentialoil" alt="Product 8">
+    <h4>Lavender Oil</h4>
+    <p>₹249</p>
+    <button>Buy Now</button>
+  </div>
+</section>
+
+<style>
+  .product_catalog {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    padding: 1rem;
+    box-sizing: border-box;
+  }
+
+  .product {
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 1rem;
+    text-align: center;
+    transition: transform 0.2s ease;
+  }
+
+  .product:hover {
+    transform: scale(1.02);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  }
+
+  .product img {
+    max-width: 100%;
+    border-radius: 4px;
+    margin-bottom: 0.5rem;
+  }
+
+  .product h4 {
+    margin: 0.5rem 0;
+    font-size: 1.1rem;
+    color: #333;
+  }
+
+  .product p {
+    color: #444;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+
+  .product button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  .product button:hover {
+    background-color: #0056b3;
+  }
+
+  /* Medium screens: 2 columns */
+  @media (min-width: 600px) and (max-width: 900px) {
+    .product_catalog {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+    }
+  }
+
+  /* Large screens: 4 columns */
+  @media (min-width: 901px) {
+    .product_catalog {
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+    }
+  }
+</style>
+
+
+<h3>Task 5: Personal Dashboard Layout</h3>
+
+<section class="dashboard">
+  <div class="dheader">
+    <h2>📊 My Dashboard</h2>
+  </div>
+
+  <div class="sidebar">
+    <h3>🔧 Tools</h3>
+    <ul>
+      <li>✔ To-Do List</li>
+      <li>📅 Planner</li>
+      <li>⏰ Reminders</li>
+      <li>📊 Reports</li>
+    </ul>
+  </div>
+
+  <div class="dcontent">
+    <div class="weather">
+      <h4>🌤 Weather</h4>
+      <p>Today: 32°C, Sunny</p>
+      <p>Tomorrow: 30°C, Cloudy</p>
+    </div>
+    <div class="calendar">
+      <h4>📅 Calendar</h4>
+      <p>🗓 May 4, 2025</p>
+      <ul>
+        <li>10 AM – Project Meeting</li>
+        <li>3 PM – Doctor Appointment</li>
+      </ul>
+    </div>
+    <div class="news">
+      <h4>📰 News</h4>
+      <p>🚀 ISRO announces new Mars mission!</p>
+      <p>📈 Stock market hits new high.</p>
+    </div>
+  </div>
+</section>
+
+<style>
+  * {
+    box-sizing: border-box;
+  }
+
+  .dashboard {
+    width: 100%;
+    display: grid;
+    grid-template-areas:
+      "dheader dheader"
+      "sidebar dcontent";
+    grid-template-columns: 200px 1fr;
+    grid-template-rows: auto 1fr;
+    gap: 1rem;
+    padding: 1rem;
+    background-color: #f2f2f2;
+    font-family: sans-serif;
+  }
+
+  .dheader {
+    grid-area: dheader;
+    background-color: #3f51b5;
+    color: white;
+    padding: 1rem;
+    border-radius: 0.5rem;
+  }
+
+  .sidebar {
+    grid-area: sidebar;
+    background-color: #ffffff;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+  }
+
+  .sidebar ul {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  .sidebar li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .dcontent {
+    grid-area: dcontent;
+    display: grid;
+    grid-template-areas:
+      "calendar weather"
+      "news news";
+      grid-template-columns: 300px 1fr;
+      grid-template-rows: 1fr 1fr;
+    gap: 1rem;
+  }
+
+  .weather, .news, .calendar {
+    background-color: white;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+  }
+
+  .weather {
+    grid-area: weather;
+  }
+
+  .news {
+    grid-area: news;
+  }
+
+  .calendar {
+    grid-area: calendar;
+  }
+
+  h4 {
+    margin-top: 0;
+  }
+</style>
+
+<h3>Task 6: CSS Grid Resume Layout</h3>
+<section class="resume">
+    <div class="header">
+        
+    </div>
+    <div class="sidebar">
+        <div class="skills"></div>
+        <div class="experience"></div>
+        <div class="education"></div>
+    </div>
+    <div class="info">
+        <div class="profile_pic"></div>
+        <div class="contact_info"></div>
+    </div>
+</section>
+<style>
+    .resume{
+        width:100%;
+        margin: auto;
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+        gap: 1rem;
+    }
+    .info{
+        grid-area: info;
+    }
+    .sidebar{
+        grid-area: sidebar;
+    }
+</style>
+
+
+
+<h3>Task 7: CSS Grid for a Restaurant Menu</h3>
+
+<section class="menu">
+  <div class="mheader"><h1>WunderBar</h1></div>
+
+  <div class="starter">
+    <h2>Starters</h2>
+    <ul>
+      <li>Garlic Bread <span>₹120</span></li>
+      <li>Tomato Soup <span>₹150</span></li>
+      <li>Bruschetta <span>₹180</span></li>
+    </ul>
+  </div>
+
+  <div class="main">
+    <h2>Main Course</h2>
+    <ul>
+      <li>Grilled Chicken <span>₹320</span></li>
+      <li>Paneer Butter Masala <span>₹290</span></li>
+      <li>Spaghetti Aglio e Olio <span>₹310</span></li>
+    </ul>
+  </div>
+
+  <div class="desserts">
+    <h2>Desserts</h2>
+    <ul>
+      <li>Chocolate Lava Cake <span>₹170</span></li>
+      <li>Gulab Jamun <span>₹100</span></li>
+      <li>Ice Cream Sundae <span>₹140</span></li>
+    </ul>
+  </div>
+</section>
+
+<style>
+  .menu {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: 
+      "header header"
+      "starter main"
+      "desserts desserts";
+    gap: 1rem;
+    padding: 1rem;
+    background: #f8f8f8;
+    box-sizing: border-box;
+    font-family: sans-serif;
+  }
+
+  .mheader {
+    grid-area: header;
+    text-align: center;
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+    border-radius: 8px;
+  }
+
+  .starter, .main, .desserts {
+    background: white;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+  }
+
+  .starter {
+    grid-area: starter;
+  }
+
+  .main {
+    grid-area: main;
+  }
+
+  .desserts {
+    grid-area: desserts;
+  }
+
+  h2 {
+    margin-top: 0;
+    color: #444;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 0.5rem;
+  }
+
+  ul {
+    list-style: none;
+    padding-left: 0;
+  }
+
+  li {
+    display: flex;
+    justify-content: space-between;
+    margin: 0.5rem 0;
+    font-size: 1rem;
+    border-bottom: 1px dashed #ddd;
+    padding-bottom: 0.3rem;
+  }
+
+  span {
+    font-weight: bold;
+    color: #222;
+  }
+</style>
+
+<h3>Task 8: CSS Grid News Website Layout</h3>
+<section class="news_web">
+  <div class="main">
+    <article>
+      <h2>🔴 Tech Giants Merge in $50B Deal</h2>
+      <p>In a historic move, AlphaTech and MicroNova have announced a $50 billion merger to compete with global leaders in AI and cloud computing.</p>
+    </article>
+    <article>
+      <h2>🌍 UN Climate Report Calls for Urgent Action</h2>
+      <p>The latest UN report warns of irreversible damage unless global emissions drop 50% by 2030. Major policy changes are urged across all nations.</p>
+    </article>
+    <article>
+      <h2>💼 Markets Rally After Positive Earnings</h2>
+      <p>Stock markets surged today as major companies reported better-than-expected earnings in Q1, easing recession fears.</p>
+    </article>
+    <article>
+      <h2>🏆 India Wins ICC World Cup Thriller</h2>
+      <p>In an epic final against Australia, India claimed the ICC World Cup after a nail-biting chase in the last over at Wankhede Stadium.</p>
+    </article>
+    <article>
+      <h2>🎬 “The Hidden Truth” Tops Weekend Box Office</h2>
+      <p>The suspense thriller “The Hidden Truth” grossed ₹150 crore globally on its opening weekend, becoming the year’s biggest hit so far.</p>
+    </article>
+  </div>
+
+  <div class="sidebar">
+    <aside>
+      <h3>📰 Trending Topics</h3>
+      <ul>
+        <li><a href="#">🚨 Breaking: Earthquake in Japan</a></li>
+        <li><a href="#">💡 Top 5 Gadgets of 2025</a></li>
+        <li><a href="#">🏛️ Parliament Passes New Education Bill</a></li>
+        <li><a href="#">🧠 Brain-Computer Tech Explained</a></li>
+        <li><a href="#">📸 Photo Story: Life in the Himalayas</a></li>
+      </ul>
+    </aside>
+  </div>
+</section>
+
+<style>
+  .news_web {
+    display: grid;
+    grid-template-areas: "main sidebar";
+    grid-template-columns: 3fr 1fr;
+    gap: 1.5rem;
+    padding: 1rem;
+    background-color: #f5f7fa;
+    font-family: Arial, sans-serif;
+  }
+
+  .main {
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+
+  .main article {
+    background-color: #fff;
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  }
+
+  .main article h2 {
+    margin-top: 0;
+    color: #1a1a1a;
+  }
+
+  .main article p {
+    color: #444;
+    font-size: 0.95rem;
+  }
+
+  .sidebar {
+    grid-area: sidebar;
+    background-color: #fff;
+    padding: 1rem 1.2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  }
+
+  .sidebar h3 {
+    margin-top: 0;
+    color: #333;
+  }
+
+  .sidebar ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .sidebar li {
+    margin: 0.6rem 0;
+  }
+
+  .sidebar a {
+    text-decoration: none;
+    color: #0056b3;
+    font-size: 0.95rem;
+  }
+
+  .sidebar a:hover {
+    text-decoration: underline;
+    color: #003d80;
+  }
+
+  /* Responsive Layout */
+  @media (max-width: 768px) {
+    .news_web {
+      grid-template-areas:
+        "main"
+        "sidebar";
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+<h3>Task 9: Creative Dashboard with CSS Grid</h3>
+<section class="dashboard">
+    <div class="dheader">
+      <h2>📊 My Dashboard</h2>
+    </div>
+  
+    <div class="sidebar">
+      <h3>🔧 Tools</h3>
+      <ul>
+        <li>✔ To-Do List</li>
+        <li>📅 Planner</li>
+        <li>⏰ Reminders</li>
+        <li>📊 Reports</li>
+      </ul>
+    </div>
+  
+    <div class="dcontent">
+      <div class="weather">
+        <h4>🌤 Weather</h4>
+        <p>Today: 32°C, Sunny</p>
+        <p>Tomorrow: 30°C, Cloudy</p>
+      </div>
+      <div class="calendar">
+        <h4>📅 Calendar</h4>
+        <p>🗓 May 4, 2025</p>
+        <ul>
+          <li>10 AM – Project Meeting</li>
+          <li>3 PM – Doctor Appointment</li>
+        </ul>
+      </div>
+      <div class="news">
+        <h4>📰 News</h4>
+        <p>🚀 ISRO announces new Mars mission!</p>
+        <p>📈 Stock market hits new high.</p>
+      </div>
+    </div>
+  </section>
+  
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+  
+    .dashboard {
+      width: 100%;
+      display: grid;
+      grid-template-areas:
+        "dheader dheader"
+        "sidebar dcontent";
+      grid-template-columns: 200px 1fr;
+      grid-template-rows: auto 1fr;
+      gap: 1rem;
+      padding: 1rem;
+      background-color: #f2f2f2;
+      font-family: sans-serif;
+    }
+  
+    .dheader {
+      grid-area: dheader;
+      background-color: #3f51b5;
+      color: white;
+      padding: 1rem;
+      border-radius: 0.5rem;
+    }
+  
+    .sidebar {
+      grid-area: sidebar;
+      background-color: #ffffff;
+      padding: 1rem;
+      border-radius: 0.5rem;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    }
+  
+    .sidebar ul {
+      list-style-type: none;
+      padding: 0;
+    }
+  
+    .sidebar li {
+      padding: 0.5rem 0;
+      border-bottom: 1px solid #ddd;
+    }
+  
+    .dcontent {
+      grid-area: dcontent;
+      display: grid;
+      grid-template-areas:
+        "calendar weather"
+        "news news";
+        grid-template-columns: 300px 1fr;
+        grid-template-rows: 1fr 1fr;
+      gap: 1rem;
+    }
+  
+    .weather, .news, .calendar {
+      background-color: white;
+      padding: 1rem;
+      border-radius: 0.5rem;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    }
+  
+    .weather {
+      grid-area: weather;
+    }
+  
+    .news {
+      grid-area: news;
+    }
+  
+    .calendar {
+      grid-area: calendar;
+    }
+  
+    h4 {
+      margin-top: 0;
+    }
+  </style>
+  
+  <h3>Task 10: Social Media Layout Using CSS Grid</h3>
+  <section class="social_media">
+    <!-- Profile Section -->
+    <div class="pprofile">
+        <div class="profile">
+            <img src="https://media.istockphoto.com/id/1204023032/photo/man-outdoor-adventures-hiking-in-norway-on-the-mountain-by-a-fjord.jpg?s=612x612&w=0&k=20&c=ZgFyVsujZJ0v1YktyDrm854DF5Daw3ciCwf4qv-tTm8=" alt="Profile Picture" class="profile_img">
+            <div>
+              <h4>@john_doe</h4>
+              <p>Frontend Developer | Tech Enthusiast</p>
+            </div>
+          </div>
+    </div>
+  
+    <!-- Feed Section -->
+    <div class="feed">
+      <div class="post">
+        <h5 class="acc_name">@alice_coder</h5>
+        <img src="https://images.unsplash.com/photo-1671187258215-0e4cd4c29fad?w=1600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8c3Vuc2V0JTIwcmFpbnxlbnwwfHwwfHx8MA%3D%3D" alt="Post Image" class="post_img">
+        <article class="caption">Exploring the new CSS Grid techniques! #WebDev #CSS</article>
+      </div>
+      <div class="post">
+        <h5 class="acc_name">@travel_jules</h5>
+        <img src="https://images.unsplash.com/photo-1671187258215-0e4cd4c29fad?w=1600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8c3Vuc2V0JTIwcmFpbnxlbnwwfHwwfHx8MA%3D%3D" alt="Post Image" class="post_img">
+        <article class="caption">Sunsets in Goa are magical 🌅 #travel #India</article>
+      </div>
+      <div class="post">
+        <h5 class="acc_name">@designninja</h5>
+        <img src="https://images.unsplash.com/photo-1671187258215-0e4cd4c29fad?w=1600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8c3Vuc2V0JTIwcmFpbnxlbnwwfHwwfHx8MA%3D%3D" alt="Post Image" class="post_img">
+        <article class="caption">Minimal UI is the future. #UXDesign #Minimalism</article>
+      </div>
+      <div class="post">
+        <h5 class="acc_name">@foodielife</h5>
+        <img src="https://images.unsplash.com/photo-1671187258215-0e4cd4c29fad?w=1600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8c3Vuc2V0JTIwcmFpbnxlbnwwfHwwfHx8MA%3D%3D" alt="Post Image" class="post_img">
+        <article class="caption">Street food in Delhi is unbeatable! 🍲 #foodie</article>
+      </div>
+    </div>
+  
+    <!-- Sidebar Section -->
+    <div class="ssidebar">
+        <div class="sidebar">
+            <a href="#" class="icons_nav">🔔 Notifications</a>
+            <a href="#" class="icons_nav">📨 Messages</a>
+            <a href="#" class="icons_nav">⚙️ Settings</a>
+          </div>
+    </div>
+  </section>
+  
+  <style>
+    .social_media {
+      width: 100%;
+      display: grid;
+      gap: 1rem;
+      padding: 1rem;
+      grid-template-columns: 1fr;
+      font-size: 1.5rem;
+      grid-template-areas: 
+        "profile"
+        "feed"
+        "sidebar";
+      background: #f9f9f9;
+      font-family: sans-serif;
+      position: relative;
+    }
+    .feed .post .caption{
+        font-size: 1.3rem;
+    }
+    .pprofile{
+        grid-area: profile;
+    }
+    .profile {
+      gap: 1rem;
+      background: white;
+      padding: 1rem;
+      border-radius: 8px;
+      position:sticky;
+      top: 0;
+      margin-top: 1rem;
+    }
+    .profile_img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+    }
+  
+    .feed {
+      grid-area: feed;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+  
+    .post {
+      background: white;
+      padding: 1rem 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    }
+  
+    .post_img {
+      width: 100%;
+      height: auto;
+      border-radius: 5px;
+      margin: 0.5rem 0;
+    }
+  
+    .caption {
+      font-size: 0.95rem;
+      color: #444;
+    }
+  
+    .acc_name {
+      margin: 0;
+      font-weight: bold;
+    }
+
+    .ssidebar{
+        grid-area: sidebar;
+    }
+  
+    .sidebar {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      background: white;
+      padding: 1rem;
+      border-radius: 8px;
+      position: sticky;
+      top: 0;
+      margin-top: 1rem;
+    }
+  
+    .icons_nav {
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+      padding: 0.5rem;
+      border-radius: 4px;
+      background: #e9e9e9;
+      transition: background 0.2s;
+    }
+  
+    .icons_nav:hover {
+      background: #ccc;
+    }
+  
+    @media (min-width: 768px) {
+      .social_media {
+        grid-template-columns: 1fr 2fr 1fr;
+        grid-template-areas: "profile feed sidebar";
+      }
+    }
+  </style>
+  n
+</body>
+
+</html>

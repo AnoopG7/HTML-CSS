@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 1</title>
+    <link rel="stylesheet" href="style.css">
+<style>
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    background-color: #5a5e5e;
+}
+
+h1 {
+    text-align: center;
+    color: #0080ff;
+    margin-bottom: 2rem;
+}
+
+details {
+    background: linear-gradient(135deg, #b2b2b2, #bcbbbb);
+    border-radius: 10px;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+details:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+summary {
+    list-style: none;
+    font-weight: bold;
+    color: #2c3e50;
+    cursor: pointer;
+    margin-bottom: 0.5rem;
+}
+
+summary::before {
+    content: "▶";
+    margin-right: 0.5rem;
+    transition: transform 0.3s ease;
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+</style>
+</head>
+
+<body>
+    <header>
+        <h1>📘 Student Dev Handbook</h1>
+    </header>
+
+    <details for="dets" name="notes">
+        <summary>What is HTML</summary>
+        <p>
+            <strong>HTML</strong> stands for <em>HyperText Markup Language</em>. It is the standard language used to
+            create and design the structure of web pages. HTML elements are represented by <code>&lt;tags&gt;</code>,
+            which are used to define content such as headings, paragraphs, links, images, and more.
+            HTML works alongside CSS and JavaScript to create complete, interactive websites.
+        </p>
+    </details>
+
+    <details name="notes">
+        <summary>What is a semantic tag?</summary>
+        <p>A semantic tag is an HTML element that conveys meaning about the content it contains, helping both browsers and developers understand the content's structure. Examples: <code>&lt;article&gt;</code>, <code>&lt;section&gt;</code>, <code>&lt;header&gt;</code>, <code>&lt;footer&gt;</code>.</p>
+      </details>
+
+      <details name="notes">
+        <summary>Difference between id and class?</summary>
+        <p>The <code>id</code> attribute is used to identify a unique element, whereas the <code>class</code> attribute is used to apply styles or group elements together. An <code>id</code> should be unique within the page, while a <code>class</code> can be reused across multiple elements.</p>
+      </details>
+
+      <details name="notes">
+        <summary>What is the <code>&lt;summary&gt;</code> element?</summary>
+        <p>The <code>&lt;summary&gt;</code> element defines a visible heading for a <code>&lt;details&gt;</code> element. It's used to provide a clickable label that toggles the visibility of the content inside the <code>&lt;details&gt;</code> element.</p>
+      </details>
+      
+      <details name="notes">
+        <summary>What is CSS?</summary>
+        <p>CSS (Cascading Style Sheets) is a style sheet language used to describe the presentation of a document written in HTML or XML. It controls the layout, colors, fonts, and overall appearance of the web page.</p>
+      </details>
+    
+</body>
+
+</html>
